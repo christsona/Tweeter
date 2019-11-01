@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.codepath.apps.restclienttemplate.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
