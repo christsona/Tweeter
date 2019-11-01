@@ -16,15 +16,11 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] Views should be responsive for both landscape/portrait mode. In portrait mode, the poster image, title, and movie overview is shown. In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
-
-* [x] Improve the user interface through styling and coloring
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='Twitter.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='twitter.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
