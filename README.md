@@ -15,6 +15,7 @@ The following **required** functionality is completed:
 * [x] User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
 
 The following **optional** features are implemented:
+* [x] User can view more tweets as they scroll with infinite pagination
 
 ## Video Walkthrough
 
