@@ -4,7 +4,7 @@
 
 Submitted by: **Aaron Christson**
 
-Time spent: **4** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -16,12 +16,14 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 * [x] User can view more tweets as they scroll with infinite pagination
+* [x] Improve the user interface and theme the app to feel "twitter branded"
+* [x] Links in tweets are clickable and will launch the web browser 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='twitterw.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='twitter.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
