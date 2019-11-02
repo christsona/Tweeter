@@ -15,12 +15,13 @@ The following **required** functionality is completed:
 * [x] User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
 
 The following **optional** features are implemented:
+* [x] User can view more tweets as they scroll with infinite pagination
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='twitter.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='twitterw.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
