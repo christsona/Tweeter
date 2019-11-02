@@ -4,17 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/twitter_dark"
     android:orientation="vertical">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/ivProfilePicture"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ivProfilePicture"-->
+    <!--        android:layout_width="50dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginStart="5dp"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_toEndOf="@+id/ivProfilePicture"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/tvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUsername"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ivProfilePicture"
+        android:textColor="#FFFFFF"
+        tools:text="Body"
+        android:autoLink="all"
+        android:linksClickable="true"/>
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tvSeparator"
+        android:textColor="@color/inline_action"
+        tools:text="9h" />
+
+    <TextView
+        android:id="@+id/tvSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/tvScreenName"
+        android:textColor="@color/inline_action"
+        tools:layout_marginStart="0dp"
+        tools:text="·" />
 
     <TextView
         android:id="@+id/tvScreenName"
@@ -24,27 +82,40 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
-        android:layout_toEndOf="@+id/ivProfilePicture"
-        tools:text="Name" />
+        android:layout_toEndOf="@+id/tvUsername"
+        android:textColor="@color/inline_action"
+        tools:text="@screenName" />
 
-    <TextView
-        android:id="@+id/tvBody"
+    <ImageView
+        android:id="@+id/ivHeart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvScreenName"
-        android:layout_marginStart="5dp"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ivRetweet"
+        android:src="@drawable/ic_vector_heart_stroke" />
+
+    <ImageView
+        android:id="@+id/ivRetweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ivReply"
+        android:src="@drawable/ic_vector_retweet_stroke" />
+
+    <ImageView
+        android:id="@+id/ivReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivProfilePicture"
-        tools:text="Body" />
+        android:src="@drawable/ic_reply_black_24dp" />
 
-    <TextView
-        android:id="@+id/tvTimeStamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        tools:text="9h" />
 </RelativeLayout>
