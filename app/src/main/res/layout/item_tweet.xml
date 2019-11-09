@@ -51,6 +51,32 @@
         android:linksClickable="true"/>
 
     <TextView
+        android:id="@+id/tvFavoriteCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBody"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/btnHeart"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textColor="@color/inline_action"
+        tools:text="12" />
+
+    <TextView
+        android:id="@+id/tvRetweetCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBody"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/btnRetweet"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textColor="@color/inline_action"
+        tools:text="12" />
+
+    <TextView
         android:id="@+id/tvTimeStamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,36 +112,42 @@
         android:textColor="@color/inline_action"
         tools:text="@screenName" />
 
-    <ImageView
-        android:id="@+id/ivHeart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnHeart"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="0dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/ivRetweet"
-        android:src="@drawable/ic_vector_heart_stroke" />
+        android:layout_toEndOf="@+id/tvRetweetCount"
+        android:background="@color/twitter_dark"
+        android:drawableBottom="@drawable/ic_vector_heart_stroke"
+        android:onClick="favorite" />
 
-    <ImageView
-        android:id="@+id/ivRetweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnRetweet"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="0dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/ivReply"
-        android:src="@drawable/ic_vector_retweet_stroke" />
+        android:layout_toEndOf="@+id/btnReply"
+        android:background="@color/twitter_dark"
+        android:drawableBottom="@drawable/ic_vector_retweet_stroke"
+        android:onClick="retweet" />
 
-    <ImageView
-        android:id="@+id/ivReply"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnReply"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivProfilePicture"
-        android:src="@drawable/ic_reply_black_24dp" />
+        android:background="@color/twitter_dark"
+        android:drawableBottom="@drawable/ic_reply_black_24dp"
+        android:onClick="reply"/>
 
 </RelativeLayout>

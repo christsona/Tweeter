@@ -51,7 +51,7 @@ public class ComposeActivity extends AppCompatActivity {
                     Snackbar longTweet = Snackbar.make(findViewById(R.id.composeLayout), "Tweet is more than 140 characters.", Snackbar.LENGTH_SHORT);
                     longTweet.show();
                 }
-                client.pusblishTweet(tweetContent, new JsonHttpResponseHandler() {
+                client.publishTweet(tweetContent, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Headers headers, JSON json) {
                         Log.i(TAG, "onSuccess");

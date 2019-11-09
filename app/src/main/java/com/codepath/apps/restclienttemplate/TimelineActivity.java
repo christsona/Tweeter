@@ -5,9 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -35,6 +39,8 @@ public class TimelineActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeContainer;
     private EndlessRecyclerViewScrollListener scrollListener;
     private final int REQUEST_CODE = 1;
+    Button btnFavorite;
+    Button btnRetweet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +63,7 @@ public class TimelineActivity extends AppCompatActivity {
 
         rvTweets = findViewById(R.id.rvTweets);
         tweets = new ArrayList<>();
-        adapter = new TweetsAdapter(this, tweets);
+        adapter = new TweetsAdapter(this, tweets,client);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rvTweets.setLayoutManager(linearLayoutManager);
         rvTweets.setAdapter(adapter);
@@ -68,7 +74,17 @@ public class TimelineActivity extends AppCompatActivity {
             }
         };
         rvTweets.addOnScrollListener(scrollListener);
+        RecyclerView.ItemDecoration itemDecoration = new
+                DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+        rvTweets.addItemDecoration(itemDecoration);
         populateHomeTimeline();
+
+//        btnFavorite.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                client.publishFavorite(Tweet.id);
+//            }
+//        });
     }
 
     private void loadMoreData() {
@@ -140,5 +156,21 @@ public class TimelineActivity extends AppCompatActivity {
                 Log.i(TAG, "onFailure", throwable);
             }
         });
+    }
+
+    public void refresh(){
+        rvTweets.smoothScrollToPosition(0);
+    }
+
+    public void retweet(View view){
+        Toast.makeText(this, "Retweet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void favorite(View view){
+        Toast.makeText(this, "Favorite", Toast.LENGTH_SHORT).show();
+    }
+
+    public void reply(View view){
+        Toast.makeText(this, "Reply", Toast.LENGTH_SHORT).show();
     }
 }
